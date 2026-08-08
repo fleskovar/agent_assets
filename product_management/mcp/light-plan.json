@@ -1,0 +1,8 @@
+{
+  "command": "lpm",
+      "args": [
+        "mcp",
+        "--user",
+        "AI PM"
+      ]
+}

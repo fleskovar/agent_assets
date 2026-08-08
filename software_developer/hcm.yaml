@@ -1,0 +1,11 @@
+name: software-developer
+version: 1.0.0
+description: Software Developer with lpm support
+author: FL
+homepage: None
+tags:
+  - software_development
+  - review
+  - python
+  - programming
+# Omitting "targets" means: install into any supported harness.
