@@ -1,0 +1,16 @@
+{
+  "// note": "Merge into package.json. `npm test` is the gate; `debug:case` is the entry point a new developer uses to learn the module — one command, one call stack, breakpoints honoured via --inspect-brk.",
+  "scripts": {
+    "test": "npm run lint && vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:cases": "vitest run tests/cases",
+    "test:watch": "vitest",
+    "test:props": "vitest run tests/properties",
+    "test:cov": "vitest run --coverage",
+    "bless": "UPDATE_BASELINES=1 vitest run tests/cases",
+    "debug:test": "vitest --inspect-brk --no-file-parallelism --test-timeout=0",
+    "debug:case": "node --inspect-brk --import tsx tests/run-case.ts",
+    "lint": "eslint . && tsc --noEmit"
+  }
+}

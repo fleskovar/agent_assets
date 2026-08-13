@@ -1,0 +1,7 @@
+{
+  "currency": "USD",
+  "grace_period_days": 5,
+  "daily_rate_bps": 25,
+  "minimum_fee_minor_units": 500,
+  "max_fee_ratio_bps": 1000
+}

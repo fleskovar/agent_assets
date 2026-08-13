@@ -1,0 +1,41 @@
+{
+  "// note": "Copy into .vscode/launch.json. Three entries, and the third is the one new developers use most: it debugs a single case folder with no test framework between the breakpoint and the domain code.",
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug: current test file",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-q", "${file}"],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Debug: test at cursor",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-q", "${file}::${selectedText}", "-x"],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Debug: one human-readable case",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/tests/case_runner.py",
+      "args": ["${input:caseName}"],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ],
+  "inputs": [
+    {
+      "id": "caseName",
+      "type": "promptString",
+      "description": "Case folder name under tests/cases/",
+      "default": "overdue-invoice-fees"
+    }
+  ]
+}

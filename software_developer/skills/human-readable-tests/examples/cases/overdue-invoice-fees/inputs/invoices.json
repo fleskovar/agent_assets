@@ -1,0 +1,44 @@
+[
+  {
+    "invoice_id": "INV-1001",
+    "status": "OPEN",
+    "total_minor_units": 120000,
+    "due_date": "2026-03-01"
+  },
+  {
+    "invoice_id": "INV-1002",
+    "status": "OPEN",
+    "total_minor_units": 4000,
+    "due_date": "2026-03-20"
+  },
+  {
+    "invoice_id": "INV-1003",
+    "status": "OPEN",
+    "total_minor_units": 50000,
+    "due_date": "2026-03-26"
+  },
+  {
+    "invoice_id": "INV-1004",
+    "status": "SETTLED",
+    "total_minor_units": 90000,
+    "due_date": "2026-02-14"
+  },
+  {
+    "invoice_id": "INV-1005",
+    "status": "OPEN",
+    "total_minor_units": 25000,
+    "due_date": "2026-03-17"
+  },
+  {
+    "invoice_id": "INV-1006",
+    "status": "OPEN",
+    "total_minor_units": 8000,
+    "due_date": "2026-04-10"
+  },
+  {
+    "invoice_id": "INV-1007",
+    "status": "OPEN",
+    "total_minor_units": 50000,
+    "due_date": "2026-03-25"
+  }
+]

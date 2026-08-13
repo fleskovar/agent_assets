@@ -1,0 +1,43 @@
+{
+  "// note": "Copy into .vscode/launch.json. Works for Node and Svelte 5 projects alike; the Vitest entry debugs the file you have open, the case entry debugs one case folder with no framework frames in the stack.",
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug: current test file (Vitest)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${relativeFile}", "--no-file-parallelism", "--test-timeout=0"],
+      "smartStep": true,
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**", "**/node_modules/vitest/**"]
+    },
+    {
+      "name": "Debug: test at cursor (Vitest)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${relativeFile}", "-t", "${selectedText}", "--no-file-parallelism", "--test-timeout=0"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Debug: one human-readable case",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["--import", "tsx"],
+      "program": "${workspaceFolder}/tests/run-case.ts",
+      "args": ["${input:caseName}"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "caseName",
+      "type": "promptString",
+      "description": "Case folder name under tests/cases/",
+      "default": "overdue-invoice-fees"
+    }
+  ]
+}

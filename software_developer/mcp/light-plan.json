@@ -1,6 +1,8 @@
 {
   "command": "lpm",
       "args": [
-        "mcp"
+        "mcp",
+        "--user",
+        "DEEPSEEK DEV"
       ]
 }

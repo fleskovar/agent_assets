@@ -38,6 +38,12 @@ you are deciding structure rather than writing a line.
 | Svelte 5 | `skills/clean-code-svelte5/SKILL.md` (plus the TypeScript guide) | `skills/design-patterns-svelte5/SKILL.md` |
 | Odin — including raylib game development | `skills/clean-code-odin/SKILL.md` | `skills/design-patterns-odin/SKILL.md` |
 
+Each language also has a **testing guide** — `skills/testing-python/SKILL.md`,
+`skills/testing-typescript/SKILL.md`, `skills/testing-csharp/SKILL.md`,
+`skills/testing-odin/SKILL.md`, `skills/testing-svelte5/SKILL.md` — covering the
+frameworks, the case-folder runner, and how to run and debug a single test in
+that language. Load it when you are writing tests rather than production code.
+
 A guide overrides this file wherever it is more specific. The C# guide in
 particular contains a hard performance rule about LINQ in game code that this
 file's "prefer expressions over loops" default does **not** survive contact with,
@@ -371,12 +377,34 @@ What new tests look like:
 - Real objects over mocks. The pure core needs none; mock only at the ports you
   defined, and never mock a type you do not own.
 - Cover the edges you can name: empty, single, boundary, duplicate, failure. A test
-  suite of happy paths is decoration.
+  suite of happy paths is decoration. Pin a boundary from **both** sides — one row
+  at the limit cannot distinguish `<=` from `<`.
 - A bug fix starts with a test that reproduces the bug and fails.
 
 **Run the tests and report what you actually saw.** Paste the real output. A test
 result you did not observe is the one unrecoverable mistake, because everything
 after it is built on a claim.
+
+**Every feature also carries a readable subset.** Two to five *human-readable case
+folders* — `inputs/`, `outputs/`, `README.md` — that a developer can solve with a
+calculator and that document the module for whoever meets it next. They are the
+reason the rules above about injected clocks, explicit arguments and returned
+results exist: a unit you cannot hand a folder of input files is a unit with
+hidden inputs. See `skills/human-readable-tests/SKILL.md`.
+
+Where to go for more:
+
+| Task | Skill |
+| --- | --- |
+| Planning a feature's suite, or its test user stories | `skills/test-driven-development/SKILL.md` |
+| Building the readable case folders | `skills/human-readable-tests/SKILL.md` |
+| Sampling the input space: properties, fuzzing, mutation | `skills/automatic-test-generation/SKILL.md` |
+| Working a reported bug | `skills/bug-fix-workflow/SKILL.md` |
+
+**Leave the project runnable and debuggable.** One command runs the suite
+(`make test`), and one gesture debugs a single test or a single case. Stepping
+through a small test with known inputs is how developers learn a codebase — if
+that takes more than a minute to set up, fix it before writing more tests.
 
 ## How to work
 
@@ -409,6 +437,8 @@ after it is built on a claim.
   the orchestrator?
 - Did I add tests for the new behaviour — and did I leave every existing test
   untouched?
+- Did I watch each new test fail once, and does the feature have its readable case
+  folders?
 - Does the linter and type checker pass clean, with no new suppressions?
 - Would someone who has never seen this code guess what each file does from its
   name and path?
@@ -417,6 +447,10 @@ after it is built on a claim.
 
 - **Never edit an existing test to make code pass.** Fix the code, or stop and ask.
 - **Never report a test result you did not run and see.**
+- **Never write the test for a bug fix after the fix.** It must be observed failing
+  against the unfixed code, or it proves nothing.
+- **Never produce a test baseline by saving what the code currently outputs** and
+  calling it the expected result. Derive it, or name the oracle.
 - **Never introduce an abstraction with one implementation** unless it is an
   adapter over an external boundary.
 - **Never pass or return an untyped map across a function boundary** — define the

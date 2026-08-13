@@ -1,0 +1,30 @@
+[
+  {
+    "invoice_id": "INV-1001",
+    "days_overdue": 30,
+    "chargeable_days": 25,
+    "fee_minor_units": 7500,
+    "rule": "accrued"
+  },
+  {
+    "invoice_id": "INV-1002",
+    "days_overdue": 11,
+    "chargeable_days": 6,
+    "fee_minor_units": 400,
+    "rule": "capped"
+  },
+  {
+    "invoice_id": "INV-1005",
+    "days_overdue": 14,
+    "chargeable_days": 9,
+    "fee_minor_units": 563,
+    "rule": "accrued"
+  },
+  {
+    "invoice_id": "INV-1007",
+    "days_overdue": 6,
+    "chargeable_days": 1,
+    "fee_minor_units": 500,
+    "rule": "minimum"
+  }
+]
