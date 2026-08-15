@@ -31,7 +31,7 @@ expressions, return new values" default does not survive contact with a 60 Hz
 frame budget and a manual allocator.** The section *Functional Odin, and where it
 stops* draws the line.
 
-Read `design-patterns-odin/SKILL.md` when you are choosing structure. If you are
+Read `skills/design-patterns-odin/SKILL.md` when you are choosing structure. If you are
 writing a game against raylib, read both, and the raylib section below is not
 optional — it is where the type discipline actually gets tested.
 

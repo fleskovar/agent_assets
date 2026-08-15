@@ -138,7 +138,7 @@ defect in the design:
 | It generates ids or random values internally | Inject an `IdSource` / seeded RNG |
 | It reads config from the environment mid-call | Load config once at startup into an immutable settings object, pass it in |
 | It queries a database or an HTTP API | Put a port at the boundary, inject a fake or a fixture-backed adapter |
-| It writes its result to instance state instead of returning it | Return the result (`clean-code-developer.md`, *Explicit dependencies* rule 3) |
+| It writes its result to instance state instead of returning it | Return the result (`subagents/clean-code-developer.md`, *Explicit dependencies* rule 3) |
 | The output depends on things not in `inputs/` | Those are hidden inputs. Find them and make them explicit |
 | The unit does five things and the output is enormous | Split the unit. Case-test the pieces and one thin orchestrator |
 
@@ -272,7 +272,7 @@ to have. Rules:
 2. **Never regenerate to make a red build green.** A case that turns red is
    either a real regression or a genuine requirement change — and the second one
    is a product decision, not yours. Stop and ask, naming the case and quoting the
-   changed values (`clean-code-developer.md`, *Tests: additive only*).
+   changed values (`subagents/clean-code-developer.md`, *Tests: additive only*).
 3. **Requirement changes get a new case, not an overwritten one**, whenever the
    old behaviour still holds for other inputs.
 4. **The regenerating commit changes baselines and nothing else**, so review can

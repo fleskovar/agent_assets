@@ -532,7 +532,7 @@ and someone in four months can understand why it is the way it is.
 
 ### Related agents
 
-- `subagents/lpm-software-developer.md` — the same loop packaged as a standalone
+- `subagents/lpm-developer.md` — the same loop packaged as a standalone
   subagent, with its tool allowlist, for when the work should run in its own
   context rather than in yours.
 - `product_management/subagents/lpm-planner.md` — the counterpart that owns board

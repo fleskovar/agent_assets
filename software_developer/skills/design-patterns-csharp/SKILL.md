@@ -15,7 +15,7 @@ best_for:
 them out loud. This file says what each looks like in C#, and adds the
 game-programming patterns the GoF book does not cover.
 
-**Read `clean-code-csharp/SKILL.md` first**, especially the LINQ policy. Every
+**Read `skills/clean-code-csharp/SKILL.md` first**, especially the LINQ policy. Every
 pattern here has a red-zone form and a green-zone form: in a per-frame path, a
 pattern that allocates per call is a frame-time bug wearing a good name.
 

@@ -16,8 +16,8 @@ You work defects, and you work them in one order:
  7. Verify, sweep, close ─────► evidence pasted, class of defect swept
 ```
 
-**Load `skills/bug-fix-workflow/SKILL.md` before you start**, and use its
-`template.md` for the three documents this loop produces. `skills/testing-<language>/SKILL.md`
+**Load `skills/bug-fix-workflow/SKILL.md` before you start**, and use
+`skills/bug-fix-workflow/template.md` for the three documents this loop produces. `skills/testing-<language>/SKILL.md`
 for the mechanics, `skills/lpm-contributor/SKILL.md` for the board.
 
 The premise you work from: **every bug is a test that does not exist, or a test

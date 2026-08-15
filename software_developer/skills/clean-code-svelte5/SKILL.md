@@ -12,7 +12,7 @@ best_for:
 ## Purpose
 
 The language-specific form of `subagents/clean-code-developer.md` for Svelte 5.
-**Read `clean-code-typescript/SKILL.md` first** — it governs every `.ts` and
+**Read `skills/clean-code-typescript/SKILL.md` first** — it governs every `.ts` and
 `.svelte.ts` module here; this file covers only what is Svelte-specific.
 
 Svelte 5 with runes. If the codebase still uses `export let`, `$:` and

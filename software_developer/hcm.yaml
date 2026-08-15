@@ -1,11 +1,86 @@
 name: software-developer
-version: 1.0.0
-description: Software Developer with lpm support
+version: 1.1.0
+description: >-
+  A code-craft standard and the agents that apply it: clean-code, design-pattern
+  and testing guides for five languages, test-driven development, the
+  human-readable case format, the defect loop, and the light-plan board the work
+  is tracked on.
 author: FL
-homepage: None
 tags:
-  - software_development
-  - review
-  - python
-  - programming
+  - software-development
+  - clean-code
+  - design-patterns
+  - testing
+  - tdd
+  - bug-fixing
+  - light-plan
 # Omitting "targets" means: install into any supported harness.
+
+# ---------------------------------------------------------------------------
+# Flavors: one language at a time
+#
+#   hcm install software-developer --flavor python
+#   hcm install software-developer --flavor svelte5 typescript
+#   hcm install software-developer                 # all five, as before
+#
+# Each language flavor is the same three guides -- how to write it, how to
+# structure it, how to test it. Everything else is common and installs whatever
+# you ask for: the five subagents, the TDD standard, the human-readable case
+# format, the defect loop, automatic test generation, simple-english, and the
+# light-plan board skills.
+#
+# The board stays common on purpose. This bundle's workflows are written to land
+# on a board -- bug-fix-workflow and test-driven-development both point at
+# skills/lpm-contributor/ for raising and closing the test stories -- so putting
+# lpm behind a flavor would leave those references dangling on every install
+# that did not ask for it.
+#
+# Svelte 5 builds on the TypeScript guides rather than replacing them, so ask for
+# both: "--flavor svelte5 typescript".
+# ---------------------------------------------------------------------------
+flavors:
+  csharp:
+    description: >-
+      C#, including Unity and game development — records and readonly structs, a
+      hard LINQ allocation policy, game-programming patterns with their
+      allocation costs, xUnit and the Unity Test Framework.
+    includes:
+      - skills/clean-code-csharp
+      - skills/design-patterns-csharp
+      - skills/testing-csharp
+  odin:
+    description: >-
+      Odin, including raylib game development — explicit allocators and the
+      context system, dispatch by union, generational handles and hot reload,
+      core:testing with the tracking allocator as an assertion.
+    includes:
+      - skills/clean-code-odin
+      - skills/design-patterns-odin
+      - skills/testing-odin
+  python:
+    description: >-
+      Python — frozen dataclasses and Protocol ports over dicts, where a pattern
+      collapses into a function or a decorator, pytest with hypothesis, ruff and
+      mypy.
+    includes:
+      - skills/clean-code-python
+      - skills/design-patterns-python
+      - skills/testing-python
+  svelte5:
+    description: >-
+      Svelte 5 — runes over stores, logic in .svelte.ts view models, context as
+      dependency injection, testing runes without a component. Pair it with the
+      typescript flavor, which it builds on.
+    includes:
+      - skills/clean-code-svelte5
+      - skills/design-patterns-svelte5
+      - skills/testing-svelte5
+  typescript:
+    description: >-
+      TypeScript and JavaScript — discriminated unions and branded ids, closures
+      and factory functions over class hierarchies, Result types, Vitest with
+      fast-check and MSW.
+    includes:
+      - skills/clean-code-typescript
+      - skills/design-patterns-typescript
+      - skills/testing-typescript

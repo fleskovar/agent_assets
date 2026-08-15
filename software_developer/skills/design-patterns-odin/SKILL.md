@@ -15,7 +15,7 @@ best_for:
 them out loud. This file says what each looks like in Odin, and adds the
 game-programming patterns for raylib work.
 
-**Read `clean-code-odin/SKILL.md` first**, especially the memory-lifetime section.
+**Read `skills/clean-code-odin/SKILL.md` first**, especially the memory-lifetime section.
 Three Odin facts collapse or reshape most of the GoF catalogue:
 
 1. **No interfaces and no inheritance.** Every pattern built on a class hierarchy

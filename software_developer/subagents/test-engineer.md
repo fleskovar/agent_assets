@@ -17,7 +17,7 @@ it for them.
 | Doing | Read |
 | --- | --- |
 | Anything | `skills/test-driven-development/SKILL.md` — layers, stories, definition of done |
-| A readable case folder | `skills/human-readable-tests/SKILL.md` + its `template.md` and `examples/` |
+| A readable case folder | `skills/human-readable-tests/SKILL.md` + `skills/human-readable-tests/template.md` and `examples/` |
 | Property, fuzz, generated, mutation | `skills/automatic-test-generation/SKILL.md` |
 | A proof-of-fix test | `skills/bug-fix-workflow/SKILL.md` |
 | Python / TypeScript / C# / Odin / Svelte 5 | `skills/testing-<language>/SKILL.md`, and the matching `skills/clean-code-<language>/SKILL.md` |

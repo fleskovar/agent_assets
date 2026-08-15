@@ -1,9 +1,76 @@
 name: product-management
-version: 1.0.0
-description: Product Management using lpm
+version: 1.1.0
+description: >-
+  Product management as a set of workable artifacts: problem framing and
+  hypotheses, PRDs, user stories and the patterns for splitting them, story maps
+  and roadmaps — plus the light-plan board a PM sets up, plans on and keeps
+  healthy.
 author: deanpeters
 homepage: https://github.com/deanpeters/Product-Manager-Skills/tree/main
 tags:
-  - product_management
-  - review
+  - product-management
+  - discovery
+  - problem-framing
+  - prd
+  - user-stories
+  - roadmap
+  - light-plan
 # Omitting "targets" means: install into any supported harness.
+
+# ---------------------------------------------------------------------------
+# Flavors: the method, or the board, or both
+#
+#   hcm install product-management --flavor artifacts   # no board tooling
+#   hcm install product-management --flavor lpm         # board tooling only
+#   hcm install product-management                      # both, as before
+#
+# Two flavors rather than one, because there is no way to ask for the common
+# part on its own: with only "lpm" declared, a plain install and "--flavor lpm"
+# would install exactly the same thing. Naming both halves is what makes either
+# of them selectable.
+#
+# The artifact skills are one flavor rather than three (discovery / delivery /
+# strategy) because they cite each other across any line that could be drawn --
+# prd-development alone points at problem-statement, problem-framing-canvas,
+# epic-hypothesis, epic-breakdown-advisor and user-story. Splitting them would
+# leave whichever half you installed referring to the half you did not.
+#
+# The lpm half has the opposite property: nothing in it names an artifact skill,
+# and no artifact skill names it. That clean seam is why it is a flavor at all.
+#
+# Common either way, and only these: simple-english (write it so it reads) and
+# workshop-facilitation (the pacing pattern the interactive skills share).
+# Neither points at anything outside itself, so both are safe in either install.
+# context-engineering-advisor reads like a third, but it cites problem-statement
+# and epic-hypothesis, so it goes with them -- a common file referring to a
+# flavored one is a dangling reference on every install that skips the flavor.
+# ---------------------------------------------------------------------------
+flavors:
+  artifacts:
+    description: >-
+      The product-management method — frame the problem, state it as a testable
+      hypothesis, write the PRD, cut it into stories with the Humanizing Work
+      split patterns, map the journey, and sequence it into a roadmap.
+    includes:
+      - skills/context-engineering-advisor
+      - skills/problem-statement
+      - skills/problem-framing-canvas
+      - skills/epic-hypothesis
+      - skills/epic-breakdown-advisor
+      - skills/prd-development
+      - skills/progressive-implementation-planning
+      - skills/roadmap-planning
+      - skills/user-story
+      - skills/user-story-mapping
+      - skills/user-story-splitting
+  lpm:
+    description: >-
+      The light-plan board — initialise it, configure types and pools, populate
+      and reshape it, and diagnose it when nobody is being offered work. Needs
+      the lpm CLI on the machine.
+    includes:
+      - skills/lpm
+      - skills/lpm-board-setup
+      - skills/lpm-board-health
+      - subagents/lpm-planner.md
+      - mcp/light-plan.json

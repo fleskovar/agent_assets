@@ -16,7 +16,7 @@ That file states the rules; this one states what they look like in TS, which TS
 idioms fight them, and which tools enforce them.
 
 Assumes TypeScript 5.x with `strict: true`. If you are writing Svelte components,
-read `clean-code-svelte5/SKILL.md` as well — this file governs the `.ts` modules
+read `skills/clean-code-svelte5/SKILL.md` as well — this file governs the `.ts` modules
 those components call.
 
 ---

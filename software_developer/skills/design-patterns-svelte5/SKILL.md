@@ -14,8 +14,8 @@ best_for:
 `subagents/clean-code-developer.md` says to use the well-known patterns and name
 them out loud. This file says what each looks like in Svelte 5.
 
-**Read `clean-code-svelte5/SKILL.md` first** for the runes themselves, and
-`design-patterns-typescript/SKILL.md` for everything that lives in a plain `.ts`
+**Read `skills/clean-code-svelte5/SKILL.md` first** for the runes themselves, and
+`skills/design-patterns-typescript/SKILL.md` for everything that lives in a plain `.ts`
 file — the patterns there are unchanged here.
 
 Svelte 5 gives each architectural layer its own file extension, which is why the

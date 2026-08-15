@@ -658,8 +658,8 @@ Work through patterns in order. For each pattern, ask "Does this apply?"
 ## References
 
 ### Related Skills
-- `user-story-splitting.md` — The 9 patterns in detail
-- `user-story.md` — Format for writing stories
+- `skills/user-story-splitting/SKILL.md` — The 9 patterns in detail
+- `skills/user-story/SKILL.md` — Format for writing stories
 - `epic-hypothesis.md` — Original epic format
 
 ### External Frameworks
@@ -674,4 +674,4 @@ Work through patterns in order. For each pattern, ask "Does this apply?"
 **Skill type:** Interactive
 **Suggested filename:** `epic-breakdown-advisor.md`
 **Suggested placement:** `/skills/interactive/`
-**Dependencies:** Uses `user-story-splitting.md`, `user-story.md`, `epic-hypothesis.md`
+**Dependencies:** Uses `skills/user-story-splitting/SKILL.md`, `skills/user-story/SKILL.md`, `epic-hypothesis.md`

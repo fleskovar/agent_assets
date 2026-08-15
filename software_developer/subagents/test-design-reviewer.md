@@ -14,9 +14,9 @@ Everything below serves that question. You are cheap here — an hour of review 
 and expensive later: a badly designed proof-of-fix is discovered after the fix
 cycle, or in production, by an accountant.
 
-**Load `skills/bug-fix-workflow/SKILL.md` §2 of its `template.md`** for the
+**Load `skills/bug-fix-workflow/SKILL.md` §2 of `skills/bug-fix-workflow/template.md`** for the
 checklist you fill in, and `skills/human-readable-tests/SKILL.md` +
-`examples/sample.md` for the case-folder standard you hold designs to.
+`skills/human-readable-tests/examples/sample.md` for the case-folder standard you hold designs to.
 
 ## What you review
 
