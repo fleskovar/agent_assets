@@ -67,7 +67,6 @@ A PRD (Product Requirements Document) is a structured document that answers:
 
 ## 4. Strategic Context
 - Business goals (OKRs)
-- Market opportunity (TAM/SAM/SOM)
 - Competitive landscape
 - Why now?
 
@@ -268,18 +267,12 @@ Non-technical small business owners (solopreneurs, 1-10 employees) who sign up f
 - **Example:**
   > "This initiative supports our Q1 OKR: Reduce churn from 15% to 8%. Improving onboarding activation directly impacts retention."
 
-**2. Size Market Opportunity (Optional)**
-- **Use:** `skills/tam-sam-som-calculator/SKILL.md` (interactive) output
-- **When:** For major initiatives, new products, exec presentations
-- **Example:**
-  > "TAM: 50M small businesses globally. SAM: 5M using SaaS tools. SOM: 500K solopreneurs in our target segments. Improving onboarding could unlock 30% of SAM (1.5M potential customers)."
-
-**3. Document Competitive Landscape (Optional)**
+**2. Document Competitive Landscape (Optional)**
 - **Source:** Competitor research, G2/Capterra reviews
 - **Example:**
   > "Competitors (Competitor A, B) have guided onboarding. Our lack of guidance is cited as a churn reason in exit surveys."
 
-**4. Explain "Why Now?"**
+**3. Explain "Why Now?"**
 - **Rationale:** Why prioritize this now vs. later?
 - **Example:**
   > "Churn spiked 15% in Q4. Onboarding is the #1 driver (60% churn in first 30 days). Fixing this is critical to hitting retention OKR."
@@ -287,8 +280,6 @@ Non-technical small business owners (solopreneurs, 1-10 employees) who sign up f
 ### Outputs from Phase 4
 
 - **Business goals:** OKRs or strategic initiatives
-- **Market opportunity:** TAM/SAM/SOM (if applicable)
-- **Competitive context:** How competitors address this
 - **Why now:** Urgency rationale
 
 ---
@@ -543,9 +534,8 @@ Day 1:
 ├─ Phase 2: Problem Statement (60 min)
 │  └─ Use: skills/problem-statement/SKILL.md
 ├─ Phase 3: Target Users & Personas (30 min)
-│  └─ Use: skills/proto-persona/SKILL.md
-└─ Phase 4: Strategic Context (45 min)
-   └─ Use: skills/tam-sam-som-calculator/SKILL.md (optional)
+   └─ Use: skills/proto-persona/SKILL.md
+
 
 Day 2:
 ├─ Phase 5: Solution Overview (60 min)
@@ -645,9 +635,6 @@ Mini example excerpt:
 **Phase 3:**
 - `skills/proto-persona/SKILL.md` (component)
 - `skills/jobs-to-be-done/SKILL.md` (component, optional)
-
-**Phase 4:**
-- `skills/tam-sam-som-calculator/SKILL.md` (interactive, optional)
 
 **Phase 5:**
 - `skills/user-story-mapping-workshop/SKILL.md` (interactive, optional)
